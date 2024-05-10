@@ -16,6 +16,9 @@ dependencies {
     implementation 'com.github.ytam:JetPicker:Tag'
 }
 ```
+Replace Tag with the latest release tag of JetPicker library from [GitHub releases.](https://github.com/ytam/JetPicker/releases)
+
+
 Ensure that you have configured the JitPack repository in your settings.gradle file:
 
 
@@ -29,8 +32,6 @@ dependencyResolutionManagement {
 }
 ```
 
-Replace Tag with the latest release tag of JetPicker library from [GitHub releases.](https://github.com/ytam/JetPicker/releases)
-
 
 Usage
 JetPickerView is the main component of the library. It provides a picker view for selecting items in a list.
@@ -41,12 +42,15 @@ JetPickerView is the main component of the library. It provides a picker view fo
 fun MyScreen() {
     var selectedItem by remember { mutableStateOf("") }
 
-    val items = listOf("Item 1", "Item 2", "Item 3", "Item 4", "Item 5")
+    val items = (1..100).toList().map { it.toString() }
 
     JetPickerView(
+        modifier = Modifier.padding(32.dp),
+        textModifier = Modifier.padding(8.dp),
         items = items,
         initialIndex = 0,
-        visibleItemCount = 3,
+        visibleItemCount = 5,
+        endText = "Age",
         onValueChange = { selectedItem = it }
     )
 
