@@ -3,7 +3,9 @@
 JetPicker is a Jetpack Compose library that provides a customizable picker view component for selecting items in a list.
 
 ## Previews
-Here are some previews of the JetPicker component:
+Here is preview of the JetPicker component:
+
+<img src="/previews/preview.gif" align="center"  width="24%"/>
 
 ## Installation
 
@@ -31,7 +33,6 @@ Replace Tag with the latest release tag of JetPicker library from [GitHub releas
 
 
 Usage
-JetPickerView
 JetPickerView is the main component of the library. It provides a picker view for selecting items in a list.
 
 
